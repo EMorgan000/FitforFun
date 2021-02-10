@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!-- Eric Morgan
+Fit For Fun Fitness Club
+2/09/21
+form.html
+-->
+
+<head>
+  <meta charset="utf-8">
+  <title>Request Info</title>
+  <link href="styles.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="form.html">Request Info</a></li>
+    </ul>
+  </nav>
+  <!--Title h1-->
+  <h1 class="form">Info Form</h1>
+
+  <!--name and email fields required, autofocus for convienience, pattern check for phone number-->
+  <div class="container">
+    <form method="get" action="thankyou.html">
+      <fieldset>
+        <legend>Contact Information</legend>
+        <label for="fname">
+          First Name:
+          <input autofocus type="text" name="fname" id="fname" required placeholder="First Name" />
+        </label>
+        <label for="lname">
+          Last Name:
+          <input type="text" name="lname" id="lname" required placeholder="Last Name" />
+        </label>
+        <label for="mail">
+          Email:
+          <input type="email" name="mail" id="mail" placeholder="email@example.com" required />
+        </label><br /><br />
+        <label for="phone">
+          Phone:
+          <input type="tel" name="phone" id="phone" placeholder="e.g. 999-999-9999" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </label>
+      </fieldset>
+
+      <!--Select box for email or phone-->
+      <div>
+        <fieldset>
+          <legend>Best Way To Reach You</legend>
+          <select name="reach" id="reach">
+            <option value="phone">Phone</option>
+            <option value="email">Email</option>
+          </select>
+        </fieldset>
+      </div>
+
+      <!--9 Classes, AM and PM radio buttons-->
+      <div>
+        <fieldset>
+          <legend>Desired Classes and Class Time(See schedule)</legend>
+          <input type="checkbox" name="class1" id="class1" value="crossTraining">
+          <label for="class1">Cross Training</label>
+          <input type="checkbox" name="class2" id="class2" value="sprint">
+          <label for="class2">Sprint</label>
+          <input type="checkbox" name="class3" id="class3" value="spin">
+          <label for="class3">Spin</label>
+          <input type="checkbox" name="class4" id="class4" value="bodyPump">
+          <label for="class4">BodyPump</label>
+          <input type="checkbox" name="class5" id="class5" value="bodyCombat">
+          <label for="class5">BodyCombat</label>
+          <input type="checkbox" name="class6" id="class6" value="step">
+          <label for="class6">Step Interval</label>
+          <input type="checkbox" name="class7" id="class7" value="AdCross">
+          <label for="class7">Advanced Cross Training</label>
+          <input type="checkbox" name="class8" id="class8" value="mixxed">
+          <label for="class8">MixxedFIT</label>
+          <input type="checkbox" name="class9" id="class9" value="zumba">
+          <label for="class9">Zumba</label>
+          &nbsp; &nbsp;
+          <label for="am" class="radio">AM</label>
+          <input type="radio" name="time" id="am" value="am" class="radio">
+          <label for="pm" class="radio">PM</label>
+          <input type="radio" name="time" id="pm" value="pm" class="radio">
+        </fieldset>
+      </div>
+
+      <!--Extra info field-->
+      <div>
+        <fieldset>
+          <legend>Additional Info</legend>
+          <textarea name="addinfo" rows="4" cols="50" placeholder="Any additional info..."></textarea>
+        </fieldset>
+      </div>
+
+      <!--Submit button-->
+      <div>
+        <input type="submit" value="submit" class="submit">
+      </div>
+    </form>
+  </div>
+  <footer>
+    <address>
+      Fit For Fun Fitness Club | 325 N. Roadie St. | Call Us: 417-888-8888 | Copyright &copy; 2021
+    </address>
+  </footer>
+</body>
+
+</html>
